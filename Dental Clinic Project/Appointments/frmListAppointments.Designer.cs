@@ -131,7 +131,7 @@
             this.dgvAppoin.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAppoin.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvAppoin.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
-            this.dgvAppoin.Location = new System.Drawing.Point(-2, 198);
+            this.dgvAppoin.Location = new System.Drawing.Point(12, 198);
             this.dgvAppoin.Name = "dgvAppoin";
             this.dgvAppoin.ReadOnly = true;
             this.dgvAppoin.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -145,7 +145,7 @@
             this.dgvAppoin.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAppoin.RowHeadersVisible = false;
             this.dgvAppoin.RowTemplate.ReadOnly = true;
-            this.dgvAppoin.Size = new System.Drawing.Size(853, 395);
+            this.dgvAppoin.Size = new System.Drawing.Size(825, 395);
             this.dgvAppoin.TabIndex = 55;
             this.dgvAppoin.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue;
             this.dgvAppoin.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
@@ -182,21 +182,21 @@
             this.cmsAppoin.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsAppoin.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsAppoin.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsAppoin.Size = new System.Drawing.Size(195, 134);
+            this.cmsAppoin.Size = new System.Drawing.Size(164, 112);
             // 
             // showDetailsToolStripMenuItem
             // 
             this.showDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showDetailsToolStripMenuItem.Image = global::Dental_Clinic_Project.Properties.Resources.appointment__2_;
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(194, 36);
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(163, 36);
             this.showDetailsToolStripMenuItem.Text = "Show Details";
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Image = global::Dental_Clinic_Project.Properties.Resources.appointment__3_;
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(194, 36);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(163, 36);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
@@ -204,7 +204,7 @@
             // 
             this.deleteToolStripMenuItem.Image = global::Dental_Clinic_Project.Properties.Resources.appointment;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(194, 36);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(163, 36);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
