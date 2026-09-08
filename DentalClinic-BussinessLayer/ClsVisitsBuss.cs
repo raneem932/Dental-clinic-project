@@ -1,0 +1,111 @@
+﻿using DentalClinic_DataAccessLayer;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DentalClinic_BussinessLayer
+{
+    public class ClsVisitsBuss
+    {
+        public int visitID {  get; set; }   
+        public int patientID {  get; set; }
+        public int dentistID {  get; set; }
+        public int? AppointmentID {  get; set; } 
+        public DateTime visitDate { get; set; }
+        public string diagnosis { get; set; }
+        public string notes {  get; set; }
+        public enum enmode { AddNew=0,update=1}
+        public enmode mode = enmode.AddNew;
+        private ClsVisitsBuss()
+        {
+            this.visitID = 1;
+            this.patientID = -1;
+            this.dentistID = -1;
+            this.AppointmentID = -1;
+            this.visitDate = DateTime.Now;
+            this.diagnosis = "";
+            this.notes = "";
+            this.mode = enmode.AddNew;
+
+        }
+        public ClsVisitsBuss(int visitID, int patientID, int dentistID, int? appointmentID, DateTime visitDate, string diagnosis, string notes)
+        {
+            this.visitID = visitID;
+            this.patientID = patientID;
+            this.dentistID = dentistID;
+            AppointmentID = appointmentID;
+            this.visitDate = visitDate;
+            this.diagnosis = diagnosis;
+            this.notes = notes;
+            this.mode = enmode.update ;
+        }
+        private bool _AddNewVisit()
+        {
+            this.visitID = ClsVisitData.AddNewVisit(this.patientID, this.dentistID, this.AppointmentID, this.diagnosis, this.notes);
+            return (this.visitID != -1);
+        }
+        private bool _updateVisit()
+        {
+            return ClsVisitData.UpdateVisit(this.visitID, this.patientID, this.dentistID, this.AppointmentID, this.diagnosis, this.notes);
+
+        }
+        public bool save()
+        {
+            switch (mode)
+            {
+                case enmode.AddNew:
+
+                    if (_AddNewVisit())
+                    {
+                        mode = enmode.update;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                case enmode.update:
+                    return _updateVisit();
+
+
+            }
+            return false;
+        }
+        public static bool DeleteVisit(int id)
+        {
+            return ClsVisitData.HardDeleteVisit(id);
+        }
+        public static DataTable GetAllVisitsWithFilterAndPatientSearch(int? patientID, int? dentiestID, DateTime? visitDate, string search)
+        {
+            return ClsVisitData.GetAllVisitsWithFilterAndPatientSearch(patientID, dentiestID, visitDate, search);
+        }
+        public static DataTable GetAllVisits()
+        {
+            return ClsVisitData.GetAllVisits();
+        }
+        public static bool isVisitEXIST(int id)
+        {
+            return ClsVisitData.IsVisitExist(id);
+        }
+        public static ClsVisitsBuss find(int id)
+        {
+            int patientID = -1, dentiestID = -1;
+            int? appointmentID = -1;
+            DateTime visitDate = DateTime.Now;
+            String diagnosis = "", notes = "";
+            bool isfound = ClsVisitData.GetInfoVisitByID(id, ref patientID, ref dentiestID, ref appointmentID, ref visitDate, ref diagnosis, ref notes);
+            if (isfound)
+            {
+                return new ClsVisitsBuss(id, patientID, dentiestID, appointmentID, visitDate, diagnosis, notes);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+    }
+}
