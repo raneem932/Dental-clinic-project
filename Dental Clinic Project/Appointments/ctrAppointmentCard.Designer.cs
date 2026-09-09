@@ -113,7 +113,6 @@
             this.foreverGroupBox1.Size = new System.Drawing.Size(616, 390);
             this.foreverGroupBox1.TabIndex = 2;
             this.foreverGroupBox1.TextColor = System.Drawing.Color.SteelBlue;
-            this.foreverGroupBox1.Click += new System.EventHandler(this.foreverGroupBox1_Click);
             // 
             // lblStatus
             // 
