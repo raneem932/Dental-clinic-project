@@ -59,9 +59,6 @@ namespace Dental_Clinic_Project.Appointments
                 lblnotes.Text = _appointmentSelected.notes;
             }
         }
-        private void ctrAppointmentCard_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
