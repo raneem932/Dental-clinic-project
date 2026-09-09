@@ -18,12 +18,6 @@ namespace Dental_Clinic_Project.users
             _userID = userID;
             InitializeComponent();
         }
-
-        private void crownLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void UserCard_Load(object sender, EventArgs e)
         {
             uctrUserCard1.loadData(_userID);
