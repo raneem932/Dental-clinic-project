@@ -33,10 +33,7 @@ namespace Dental_Clinic_Project.Appointments
                 return _appointmentSelected;
             }
         }
-        private void foreverGroupBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
         public void LoadData(int appointmentID)
         {
             _AppointmentID = appointmentID;
