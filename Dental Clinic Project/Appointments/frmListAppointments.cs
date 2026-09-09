@@ -221,5 +221,12 @@ namespace Dental_Clinic_Project.Appointments
             }
             _refreshData();
         }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int id = (int)dgvAppoin.CurrentRow.Cells[0].Value;
+            FrmAppointmentCard frm = new FrmAppointmentCard(id);
+            frm.ShowDialog();
+        }
     }
 }

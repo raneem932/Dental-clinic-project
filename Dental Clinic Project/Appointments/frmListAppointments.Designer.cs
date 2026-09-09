@@ -182,21 +182,22 @@
             this.cmsAppoin.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsAppoin.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsAppoin.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsAppoin.Size = new System.Drawing.Size(164, 112);
+            this.cmsAppoin.Size = new System.Drawing.Size(195, 134);
             // 
             // showDetailsToolStripMenuItem
             // 
             this.showDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showDetailsToolStripMenuItem.Image = global::Dental_Clinic_Project.Properties.Resources.appointment__2_;
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(163, 36);
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(194, 36);
             this.showDetailsToolStripMenuItem.Text = "Show Details";
+            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Image = global::Dental_Clinic_Project.Properties.Resources.appointment__3_;
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(163, 36);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(194, 36);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
@@ -204,7 +205,7 @@
             // 
             this.deleteToolStripMenuItem.Image = global::Dental_Clinic_Project.Properties.Resources.appointment;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(163, 36);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(194, 36);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 

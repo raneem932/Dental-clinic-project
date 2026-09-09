@@ -66,7 +66,7 @@
             // 
             this.ctrDentistCard1.Location = new System.Drawing.Point(1, 1);
             this.ctrDentistCard1.Name = "ctrDentistCard1";
-            this.ctrDentistCard1.Size = new System.Drawing.Size(730, 264);
+            this.ctrDentistCard1.Size = new System.Drawing.Size(730, 280);
             this.ctrDentistCard1.TabIndex = 0;
             // 
             // FrmDentistCard

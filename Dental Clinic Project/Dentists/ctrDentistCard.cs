@@ -62,19 +62,13 @@ namespace Dental_Clinic_Project.Dentists
             InitializeComponent();
         }
 
-        private void guna2GroupBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
+     
 
         private void ctrDentistCard_Load(object sender, EventArgs e)
         {
            
         }
 
-        private void lblSpec_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

@@ -75,6 +75,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appointments\ctrAppointmentCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Appointments\ctrAppointmentCard.Designer.cs">
+      <DependentUpon>ctrAppointmentCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Appointments\frmAddNewAppoin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     <Compile Include="users\UctrUserCard.Designer.cs">
       <DependentUpon>UctrUserCard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Appointments\ctrAppointmentCard.resx">
+      <DependentUpon>ctrAppointmentCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Appointments\frmAddNewAppoin.resx">
       <DependentUpon>frmAddNewAppoin.cs</DependentUpon>
     </EmbeddedResource>

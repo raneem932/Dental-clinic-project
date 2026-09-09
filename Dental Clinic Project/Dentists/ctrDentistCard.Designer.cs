@@ -102,7 +102,6 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(750, 299);
             this.guna2GroupBox1.TabIndex = 0;
             this.guna2GroupBox1.Text = "Dentist Card";
-            this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
             // 
             // lblFullName
             // 
@@ -174,7 +173,6 @@
             this.lblSpec.Size = new System.Drawing.Size(202, 49);
             this.lblSpec.TabIndex = 144;
             this.lblSpec.Text = "????";
-            this.lblSpec.Click += new System.EventHandler(this.lblSpec_Click);
             // 
             // lblEmail
             // 
