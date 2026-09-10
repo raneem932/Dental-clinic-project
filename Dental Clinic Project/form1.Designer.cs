@@ -289,7 +289,7 @@
             this.btnVisits.Name = "btnVisits";
             this.btnVisits.Size = new System.Drawing.Size(180, 45);
             this.btnVisits.TabIndex = 7;
-            this.btnVisits.Text = "Visits&&Treatments";
+            this.btnVisits.Text = "Visit Treatments";
             this.btnVisits.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnVisits.TextOffset = new System.Drawing.Point(35, 0);
             this.btnVisits.UseTransparentBackground = true;
