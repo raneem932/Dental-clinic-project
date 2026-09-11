@@ -200,6 +200,42 @@ namespace DentalClinic_DataAccessLayer
 
         }
 
+        public static DataTable GetAllVisitsWithTreatments()
+        {
+
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand("sp_getAllVisitsWithTreatments", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    try
+                    {
+                        connection.Open();
+
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        if (reader.HasRows)
+
+                        {
+                            dt.Load(reader);
+                        }
+
+                        reader.Close();
+
+
+                    }
+
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Error get all data: " + ex.Message);
+                    }
+
+                }
+            }
+            return dt;
+
+        }
 
     }
 }

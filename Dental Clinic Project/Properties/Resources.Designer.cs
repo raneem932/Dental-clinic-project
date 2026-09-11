@@ -193,6 +193,16 @@ namespace Dental_Clinic_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dentist_taking_care_of_teeth_health {
+            get {
+                object obj = ResourceManager.GetObject("Dentist taking care of teeth health", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap diagnostic {
             get {
                 object obj = ResourceManager.GetObject("diagnostic", resourceCulture);

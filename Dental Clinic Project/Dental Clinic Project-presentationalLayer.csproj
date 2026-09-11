@@ -218,6 +218,12 @@
     <Compile Include="users\UctrUserCard.Designer.cs">
       <DependentUpon>UctrUserCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="visit&amp;treatments\frmVisitsTreatments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visit&amp;treatments\frmVisitsTreatments.Designer.cs">
+      <DependentUpon>frmVisitsTreatments.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Appointments\ctrAppointmentCard.resx">
       <DependentUpon>ctrAppointmentCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="users\UctrUserCard.resx">
       <DependentUpon>UctrUserCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visit&amp;treatments\frmVisitsTreatments.resx">
+      <DependentUpon>frmVisitsTreatments.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -589,6 +598,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\istockphoto-2160600453-1024x10241.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dentist taking care of teeth health.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
