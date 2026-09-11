@@ -74,6 +74,7 @@ namespace DentalClinic_BussinessLayer
         {
             return ClstreatmentsData.GetAllTreatment();
         }
+      
         public static ClsTreatmentsBuss find(int id)
         {
             string TreatmentName = "", description = "";

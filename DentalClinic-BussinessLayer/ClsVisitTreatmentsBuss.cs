@@ -76,5 +76,22 @@ namespace DentalClinic_BussinessLayer
         {
             return ClsVisitTreatmentsData.GetAllVisitsWithTreatments();
         }
+        public static DataTable GetallVisitstreatmentsToday()
+        {
+            return ClsVisitTreatmentsData.GetAllTodayVisitsTreatments();
+        }
+        public static DataTable GetallVisitstreatmentsthisMonth()
+        {
+            return ClsVisitTreatmentsData.GetAllVisitsTreatmentsthisMonth();
+        }
+        public static DataTable GetallVisitstreatmentsthisYear()
+        {
+            return ClsVisitTreatmentsData.GetAllVisitsTreatmentsthisYear();
+        }
+        public static DataTable GetallVisitstreatmentsInSpecificDate(DateTime date)
+        {
+            return ClsVisitTreatmentsData.GetAllVisitsTreatmentsInSpecificDate(date);
+
+        }
     }
 }

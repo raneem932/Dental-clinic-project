@@ -293,6 +293,7 @@
             this.btnVisits.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnVisits.TextOffset = new System.Drawing.Point(35, 0);
             this.btnVisits.UseTransparentBackground = true;
+            this.btnVisits.Click += new System.EventHandler(this.btnVisits_Click);
             // 
             // btnAppointments
             // 

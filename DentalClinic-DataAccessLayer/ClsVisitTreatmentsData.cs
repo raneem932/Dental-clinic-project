@@ -236,6 +236,153 @@ namespace DentalClinic_DataAccessLayer
             return dt;
 
         }
+        public static DataTable GetAllTodayVisitsTreatments()
+        {
+
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand("sp_getAllVisitsWithTreatmentsToday", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    try
+                    {
+                        connection.Open();
+
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        if (reader.HasRows)
+
+                        {
+                            dt.Load(reader);
+                        }
+
+                        reader.Close();
+
+
+                    }
+
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Error get data: " + ex.Message);
+                    }
+
+                }
+            }
+            return dt;
+
+        }
+
+        public static DataTable GetAllVisitsTreatmentsthisYear()
+        {
+
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand("sp_getAllVisitsWithTreatmentsthisyear", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    try
+                    {
+                        connection.Open();
+
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        if (reader.HasRows)
+
+                        {
+                            dt.Load(reader);
+                        }
+
+                        reader.Close();
+
+
+                    }
+
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Error get data: " + ex.Message);
+                    }
+
+                }
+            }
+            return dt;
+
+        }
+
+        public static DataTable GetAllVisitsTreatmentsthisMonth()
+        {
+
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand("sp_getAllVisitsWithTreatmentsthisMonth", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    try
+                    {
+                        connection.Open();
+
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        if (reader.HasRows)
+
+                        {
+                            dt.Load(reader);
+                        }
+
+                        reader.Close();
+
+
+                    }
+
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Error get data: " + ex.Message);
+                    }
+
+                }
+            }
+            return dt;
+
+        }
+        public static DataTable GetAllVisitsTreatmentsInSpecificDate(DateTime date)
+        {
+
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand("sp_getAllVisitsWithTreatmentsInSpesificDate", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@date", date);
+                    try
+                    {
+                        connection.Open();
+
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        if (reader.HasRows)
+
+                        {
+                            dt.Load(reader);
+                        }
+
+                        reader.Close();
+
+
+                    }
+
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Error get data: " + ex.Message);
+                    }
+
+                }
+            }
+            return dt;
+
+        }
 
     }
 }

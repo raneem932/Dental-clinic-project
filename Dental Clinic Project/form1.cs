@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Dental_Clinic_Project.Appointments;
 using Dental_Clinic_Project.Dentists;
 using Dental_Clinic_Project.users;
+using Dental_Clinic_Project.visit_treatments;
 using DentalClinic_BussinessLayer;
 using Guna.UI2.WinForms;
 namespace Dental_Clinic_Project
@@ -87,6 +88,12 @@ namespace Dental_Clinic_Project
         {
             formPanel.Visible = true;
             openChildForm(new frmListAppointments());
+        }
+
+        private void btnVisits_Click(object sender, EventArgs e)
+        {
+            formPanel.Visible = true;
+            openChildForm(new frmVisitsTreatments());
         }
     }
 }
