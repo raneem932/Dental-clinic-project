@@ -50,7 +50,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Dental_Clinic_Project.Properties.Resources.Dentist_taking_care_of_teeth_health;
-            this.pictureBox1.Location = new System.Drawing.Point(301, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(301, -7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(195, 154);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
