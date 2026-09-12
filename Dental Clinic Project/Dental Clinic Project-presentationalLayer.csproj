@@ -218,6 +218,12 @@
     <Compile Include="users\UctrUserCard.Designer.cs">
       <DependentUpon>UctrUserCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="visit&amp;treatments\FrmAddUpdateVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visit&amp;treatments\FrmAddUpdateVisit.Designer.cs">
+      <DependentUpon>FrmAddUpdateVisit.cs</DependentUpon>
+    </Compile>
     <Compile Include="visit&amp;treatments\frmVisitsTreatments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="users\UctrUserCard.resx">
       <DependentUpon>UctrUserCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visit&amp;treatments\FrmAddUpdateVisit.resx">
+      <DependentUpon>FrmAddUpdateVisit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="visit&amp;treatments\frmVisitsTreatments.resx">
       <DependentUpon>frmVisitsTreatments.cs</DependentUpon>
