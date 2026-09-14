@@ -18,7 +18,7 @@ namespace Dental_Clinic_Project.Dentists
     public partial class frmAddUpdateDentist : Form
     {
 
-        public delegate void DataBackEventHandler(object sender, int PersonID);
+        public delegate void DataBackEventHandler(object sender, int DentisiID);
 
         // Declare an event using the delegate
         public event DataBackEventHandler DataBack;
