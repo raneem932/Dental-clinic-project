@@ -134,5 +134,11 @@ namespace Dental_Clinic_Project.visit_treatments
             dgvVisitstreatments.DataSource = ClsVisitTreatmentsBuss.GetallVisitstreatmentsInSpecificDate(dateTimePacker.Value);
 
         }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            FrmAddUpdateVisit frm = new FrmAddUpdateVisit();
+            frm.ShowDialog();
+        }
     }
 }

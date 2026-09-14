@@ -43,6 +43,7 @@
             this.txtFilter = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmbdateFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dateTimePacker = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitstreatments)).BeginInit();
             this.SuspendLayout();
@@ -256,12 +257,27 @@
             this.dateTimePacker.Value = new System.DateTime(2026, 8, 26, 19, 57, 18, 86);
             this.dateTimePacker.ValueChanged += new System.EventHandler(this.dateTimePacker_ValueChanged);
             // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.Location = new System.Drawing.Point(773, 138);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(64, 54);
+            this.guna2ImageButton1.TabIndex = 67;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
             // frmVisitsTreatments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(849, 636);
+            this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.dateTimePacker);
             this.Controls.Add(this.cmbdateFilter);
             this.Controls.Add(this.txtFilter);
@@ -297,5 +313,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtFilter;
         private Guna.UI2.WinForms.Guna2ComboBox cmbdateFilter;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePacker;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
     }
 }
