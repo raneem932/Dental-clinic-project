@@ -65,7 +65,35 @@ namespace DentalClinic_DataAccessLayer
             }
             return VisitID;
         }
-
+        public static int addnewvisitWithTreatments(int patientID, int DentistID, int? appointmentID, string diagnosis, string notes ,List<int> treatmentIDs)
+        {
+           
+           using (SqlConnection connection=new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                connection.Open();
+                SqlTransaction transaction = connection.BeginTransaction();
+                try
+                {
+                    int visitID = AddNewVisit(patientID, DentistID, appointmentID, diagnosis, notes);
+                    foreach ( int treatment in treatmentIDs)
+                    {
+                        bool success = ClsVisitTreatmentsData.AddNewVisitTreatment(visitID, treatment, notes);
+                        if (!success)
+                        {
+                            throw new Exception("failed to add treatment");
+                        }
+                    }
+                        transaction.Commit();
+                        return visitID;
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    throw;
+                }
+                
+            }
+        }
         public static bool UpdateVisit(int visitID, int patientID, int DentistID, int? appointmentID, string diagnosis, string notes)
         {
             int rowIffected = 0;

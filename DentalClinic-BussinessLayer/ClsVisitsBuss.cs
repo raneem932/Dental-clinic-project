@@ -10,16 +10,17 @@ namespace DentalClinic_BussinessLayer
 {
     public class ClsVisitsBuss
     {
-        public int visitID {  get; set; }   
-        public int patientID {  get; set; }
-        public int dentistID {  get; set; }
-        public int? AppointmentID {  get; set; } 
+        public int visitID { get; set; }
+        public int patientID { get; set; }
+        public int dentistID { get; set; }
+        public int? AppointmentID { get; set; }
         public DateTime visitDate { get; set; }
         public string diagnosis { get; set; }
-        public string notes {  get; set; }
+        public string notes { get; set; }
+        public List<int> treatmntIDs{get;set;}
         public enum enmode { AddNew=0,update=1}
         public enmode mode = enmode.AddNew;
-        private ClsVisitsBuss()
+        public ClsVisitsBuss()
         {
             this.visitID = 1;
             this.patientID = -1;
@@ -29,9 +30,9 @@ namespace DentalClinic_BussinessLayer
             this.diagnosis = "";
             this.notes = "";
             this.mode = enmode.AddNew;
-
+            this.treatmntIDs = new List<int>();
         }
-        public ClsVisitsBuss(int visitID, int patientID, int dentistID, int? appointmentID, DateTime visitDate, string diagnosis, string notes)
+        public ClsVisitsBuss(int visitID, int patientID, int dentistID, int? appointmentID, DateTime visitDate, string diagnosis, string notes, List<int> treatmntIDs)
         {
             this.visitID = visitID;
             this.patientID = patientID;
@@ -40,7 +41,8 @@ namespace DentalClinic_BussinessLayer
             this.visitDate = visitDate;
             this.diagnosis = diagnosis;
             this.notes = notes;
-            this.mode = enmode.update ;
+            this.mode = enmode.update;
+            this.treatmntIDs =treatmntIDs;
         }
         private bool _AddNewVisit()
         {
@@ -96,6 +98,7 @@ namespace DentalClinic_BussinessLayer
             int? appointmentID = -1;
             DateTime visitDate = DateTime.Now;
             String diagnosis = "", notes = "";
+            
             bool isfound = ClsVisitData.GetInfoVisitByID(id, ref patientID, ref dentiestID, ref appointmentID, ref visitDate, ref diagnosis, ref notes);
             if (isfound)
             {

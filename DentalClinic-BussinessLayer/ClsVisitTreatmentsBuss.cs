@@ -18,7 +18,7 @@ namespace DentalClinic_BussinessLayer
         public enum enMode { addnew=0,Update=1}
         public enMode Mode = enMode.addnew;
 
-        public ClsVisitTreatmentsBuss(int visitTreatmentID, int visitID, int treatmentID, decimal cost, string notes)
+        public ClsVisitTreatmentsBuss(int visitTreatmentID, int visitID,int treatmentID, decimal cost, string notes)
         {
             this.visitTreatmentID = visitTreatmentID;
             this.visitID = visitID;
@@ -31,15 +31,15 @@ namespace DentalClinic_BussinessLayer
         {
             this.visitTreatmentID  =-1;
             this.visitID = -1;
-            this.treatmentID = -1;
+            this.treatmentID =-1 ;
             this.cost = 0;
             this.notes = "";
             Mode = enMode.addnew;
         }
         private bool _AddNewVisitTreatment()
         {
-            this.visitTreatmentID = ClsVisitTreatmentsData.AddNewVisitTreatment(this.visitID, this.treatmentID, this.cost, this.notes);
-            return (this.visitTreatmentID != -1);
+            return( ClsVisitTreatmentsData.AddNewVisitTreatment(this.visitID, this.treatmentID, this.notes));
+            
         }
         private bool _updateVisitTreatment()
         {

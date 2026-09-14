@@ -10,9 +10,9 @@ namespace DentalClinic_DataAccessLayer
 {
     public class ClsVisitTreatmentsData
     {
-        public static int AddNewVisitTreatment(int visitID,int treatmentID,Decimal Cost, string notes)
+        public static bool AddNewVisitTreatment(int visitID, int treatmentID, string notes)
         {
-            int VisitTreatmentID = -1;
+            int rowIffected = 0;
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand("sp_AddNewVisitTreatment", connection))
@@ -20,7 +20,7 @@ namespace DentalClinic_DataAccessLayer
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@visitID", visitID);
                     command.Parameters.AddWithValue("@TreatmentID", treatmentID);
-                    command.Parameters.AddWithValue("@cost", Cost);
+                   
 
                     if (notes != null && notes != "")
                     {
@@ -32,27 +32,22 @@ namespace DentalClinic_DataAccessLayer
 
                     }
 
-                  
                     try
                     {
                         connection.Open();
-                        Object result = command.ExecuteScalar();
-                        if (result != null && int.TryParse(result.ToString(), out int insertedID))
-                        {
-                            VisitTreatmentID = insertedID;
-                        }
+                        rowIffected = command.ExecuteNonQuery();
 
                     }
                     catch (Exception ex)
                     {
-                        throw new Exception("error : " + ex.Message);
+                        throw new Exception("error:" + ex.Message);
                     }
 
                 }
             }
-            return VisitTreatmentID;
+            return rowIffected>0;
         }
-        public static bool UpdateVisitTreatment(int VisitTreatmentID,int? visitID, int? treatmentID, Decimal? Cost, string notes)
+        public static bool UpdateVisitTreatment(int VisitTreatmentID,int? visitID,int treatmentID, Decimal? Cost, string notes)
         {
             int rowIffected = 0;
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
@@ -70,16 +65,6 @@ namespace DentalClinic_DataAccessLayer
                         command.Parameters.AddWithValue("@visitID", System.DBNull.Value);
 
                     }
-                    if (treatmentID.HasValue)
-                    {
-                        command.Parameters.AddWithValue("@TreatmentID", treatmentID);
-                    }
-                    else
-                    {
-                        command.Parameters.AddWithValue("@TreatmentID", System.DBNull.Value);
-
-                    }
-
                     if (Cost.HasValue)
                     {
                         command.Parameters.AddWithValue("@cost", Cost);
