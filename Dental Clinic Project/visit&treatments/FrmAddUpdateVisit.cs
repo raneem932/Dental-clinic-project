@@ -74,20 +74,32 @@ namespace Dental_Clinic_Project.visit_treatments
             }
             else
             {
-                _visitSelected = ClsVisitsBuss.find(_visitid);
-                if (_visitSelected == null)
+                //_visitSelected = ClsVisitsBuss.find(_visitid);
+                //if (_visitSelected == null)
+                //{
+                //    MessageBox.Show("no visit with ID" + _visitid, "visit not found", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                //    this.Close();
+                //    return;
+                //}
+                //cmbPatientName.Text = ClsPatientBuss.find(_visitSelected.patientID).fullName;
+                //cmbDentistName.Text = ClsDentistBuss.find(_visitSelected.dentistID).fullName;
+                //dtpVisitDate.Value = _visitSelected.visitDate;
+                //txtAppointmentID.Text = _visitSelected.AppointmentID.ToString();
+                //txtNotes.Text = _visitSelected.notes;
+                //txtDiagnosis.Text = _visitSelected.diagnosis;
+                DataSet ds = ClsVisitsBuss.getVisitDetails(_visitid);
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    MessageBox.Show("no visit with ID" + _visitid, "visit not found", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                    this.Close();
-                    return;
+                    DataRow row =ds.Tables[0].Rows[0];
+                    cmbPatientName.Text = row["patientName"].ToString();
+                    cmbDentistName.Text = row["DentistName"].ToString();
+                    txtAppointmentID.Text = row["AppointmentID"].ToString();
+                    dtpVisitDate.Value = (DateTime)row["visitdate"];
+                    txtDiagnosis.Text = row["diagnosis"].ToString();
+                    txtNotes.Text = row["notes"].ToString();
+                    dgvTreatments.DataSource = ds.Tables[1];
                 }
-                cmbPatientName.Text = ClsPatientBuss.find(_visitSelected.patientID).fullName;
-                cmbDentistName.Text=ClsDentistBuss.find(_visitSelected.dentistID).fullName;
-                dtpVisitDate.Value = _visitSelected.visitDate;
-                txtAppointmentID.Text = _visitSelected.AppointmentID.ToString();
-                txtNotes.Text = _visitSelected.notes;
-                txtDiagnosis.Text = _visitSelected.diagnosis;
-               
+
             }
         }
     }

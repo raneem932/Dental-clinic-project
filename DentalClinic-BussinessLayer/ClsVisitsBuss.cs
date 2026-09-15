@@ -92,7 +92,11 @@ namespace DentalClinic_BussinessLayer
         {
             return ClsVisitData.IsVisitExist(id);
         }
-        public static ClsVisitsBuss find(int id)
+        public static DataSet getVisitDetails(int id)
+        {
+            return ClsVisitData.getVisitDetails(id);
+        }
+       /* public static ClsVisitsBuss find(int id)
         {
             int patientID = -1, dentiestID = -1;
             int? appointmentID = -1;
@@ -108,7 +112,7 @@ namespace DentalClinic_BussinessLayer
             {
                 return null;
             }
-        }
+        }*/
 
     }
 }

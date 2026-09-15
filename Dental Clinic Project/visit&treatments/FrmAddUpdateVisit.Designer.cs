@@ -60,6 +60,8 @@
             this.dungeonLabel6 = new ReaLTaiizor.Controls.DungeonLabel();
             this.icnSave = new ReaLTaiizor.Controls.TickIcon();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.dgvTreatments = new System.Windows.Forms.DataGridView();
+            this.dungeonLabel8 = new ReaLTaiizor.Controls.DungeonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -69,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
@@ -505,12 +508,34 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 135;
             // 
+            // dgvTreatments
+            // 
+            this.dgvTreatments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTreatments.Location = new System.Drawing.Point(128, 349);
+            this.dgvTreatments.Name = "dgvTreatments";
+            this.dgvTreatments.Size = new System.Drawing.Size(504, 176);
+            this.dgvTreatments.TabIndex = 136;
+            // 
+            // dungeonLabel8
+            // 
+            this.dungeonLabel8.AutoSize = true;
+            this.dungeonLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dungeonLabel8.ForeColor = System.Drawing.Color.SteelBlue;
+            this.dungeonLabel8.Location = new System.Drawing.Point(27, 365);
+            this.dungeonLabel8.Name = "dungeonLabel8";
+            this.dungeonLabel8.Size = new System.Drawing.Size(81, 17);
+            this.dungeonLabel8.TabIndex = 137;
+            this.dungeonLabel8.Text = "Treatments :";
+            // 
             // FrmAddUpdateVisit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(867, 384);
+            this.ClientSize = new System.Drawing.Size(867, 520);
+            this.Controls.Add(this.dungeonLabel8);
+            this.Controls.Add(this.dgvTreatments);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.icnSave);
             this.Controls.Add(this.dungeonLabel6);
@@ -552,6 +577,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -590,5 +616,7 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private ReaLTaiizor.Controls.TickIcon icnSave;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel8;
+        private System.Windows.Forms.DataGridView dgvTreatments;
     }
 }

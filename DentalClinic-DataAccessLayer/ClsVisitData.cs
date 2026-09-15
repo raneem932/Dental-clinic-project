@@ -241,6 +241,31 @@ namespace DentalClinic_DataAccessLayer
             }
             return dt;
         }
+
+
+        public static DataSet getVisitDetails(int visitid)
+        {
+            DataSet ds = new DataSet();
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand("sp_getVisitDetails", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@visitID", visitid);
+                    try
+                    {
+                        connection.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        adapter.Fill(ds);
+                    }
+                    catch(Exception ex)
+                    {
+                        throw new Exception("error:" + ex.Message);
+                    }
+                }
+            }
+            return ds;
+        }
         public static DataTable GetAllVisits()
         {
 
