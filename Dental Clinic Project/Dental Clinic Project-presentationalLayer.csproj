@@ -611,5 +611,14 @@
   <ItemGroup>
     <None Include="Resources\Dentist taking care of teeth health.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1317151329-1024x1024.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add %282%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

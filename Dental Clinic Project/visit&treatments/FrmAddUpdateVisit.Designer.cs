@@ -41,11 +41,7 @@
             this.dungeonLabel2 = new ReaLTaiizor.Controls.DungeonLabel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
-            this.cmbPatientName = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dungeonLabel1 = new ReaLTaiizor.Controls.DungeonLabel();
-            this.dtpVisitDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.iconPictureBox7 = new FontAwesome.Sharp.IconPictureBox();
-            this.dungeonLabel3 = new ReaLTaiizor.Controls.DungeonLabel();
             this.txtVisitID = new Guna.UI2.WinForms.Guna2TextBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.dungeonLabel4 = new ReaLTaiizor.Controls.DungeonLabel();
@@ -60,18 +56,22 @@
             this.dungeonLabel6 = new ReaLTaiizor.Controls.DungeonLabel();
             this.icnSave = new ReaLTaiizor.Controls.TickIcon();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.dgvTreatments = new System.Windows.Forms.DataGridView();
-            this.dungeonLabel8 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cmbpatients = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dtpAppointmentDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.iconPictureBox7 = new FontAwesome.Sharp.IconPictureBox();
+            this.dungeonLabel3 = new ReaLTaiizor.Controls.DungeonLabel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
@@ -89,6 +89,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Dental_Clinic_Project.Properties.Resources.Dentist_taking_care_of_teeth_health;
+            this.pictureBox1.InitialImage = global::Dental_Clinic_Project.Properties.Resources.home1;
             this.pictureBox1.Location = new System.Drawing.Point(348, 120);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(171, 123);
@@ -113,25 +114,31 @@
             // txtAppointmentID
             // 
             this.txtAppointmentID.Animated = true;
+            this.txtAppointmentID.BackColor = System.Drawing.Color.Transparent;
             this.txtAppointmentID.BorderRadius = 6;
             this.txtAppointmentID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAppointmentID.DefaultText = "N/A";
+            this.txtAppointmentID.DefaultText = "";
             this.txtAppointmentID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtAppointmentID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtAppointmentID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAppointmentID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAppointmentID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAppointmentID.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAppointmentID.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.txtAppointmentID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txtAppointmentID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAppointmentID.Location = new System.Drawing.Point(164, 119);
+            this.txtAppointmentID.Location = new System.Drawing.Point(163, 107);
             this.txtAppointmentID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAppointmentID.Name = "txtAppointmentID";
             this.txtAppointmentID.PlaceholderText = "";
             this.txtAppointmentID.SelectedText = "";
-            this.txtAppointmentID.Size = new System.Drawing.Size(160, 24);
+            this.txtAppointmentID.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.txtAppointmentID.ShadowDecoration.Enabled = true;
+            this.txtAppointmentID.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.txtAppointmentID.Size = new System.Drawing.Size(168, 36);
             this.txtAppointmentID.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtAppointmentID.TabIndex = 109;
+            this.txtAppointmentID.TextChanged += new System.EventHandler(this.txtAppointmentID_TextChanged);
+            this.txtAppointmentID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilterValue_KeyPress);
             // 
             // iconPictureBox10
             // 
@@ -169,15 +176,19 @@
             this.cmbDentistName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDentistName.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbDentistName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbDentistName.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDentistName.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.cmbDentistName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbDentistName.FormattingEnabled = true;
             this.cmbDentistName.ItemHeight = 30;
             this.cmbDentistName.Location = new System.Drawing.Point(161, 225);
             this.cmbDentistName.MaxDropDownItems = 20;
             this.cmbDentistName.Name = "cmbDentistName";
+            this.cmbDentistName.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.cmbDentistName.ShadowDecoration.Enabled = true;
+            this.cmbDentistName.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.cmbDentistName.Size = new System.Drawing.Size(170, 36);
             this.cmbDentistName.TabIndex = 118;
+            this.cmbDentistName.Validating += new System.ComponentModel.CancelEventHandler(this.Imptycombo_Validating);
             // 
             // dungeonLabel2
             // 
@@ -221,26 +232,6 @@
             this.iconPictureBox6.TabIndex = 115;
             this.iconPictureBox6.TabStop = false;
             // 
-            // cmbPatientName
-            // 
-            this.cmbPatientName.AllowDrop = true;
-            this.cmbPatientName.AutoRoundedCorners = true;
-            this.cmbPatientName.BackColor = System.Drawing.Color.Transparent;
-            this.cmbPatientName.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbPatientName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPatientName.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbPatientName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbPatientName.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.cmbPatientName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbPatientName.FormattingEnabled = true;
-            this.cmbPatientName.ItemHeight = 30;
-            this.cmbPatientName.Location = new System.Drawing.Point(161, 164);
-            this.cmbPatientName.MaxDropDownItems = 20;
-            this.cmbPatientName.Name = "cmbPatientName";
-            this.cmbPatientName.Size = new System.Drawing.Size(170, 36);
-            this.cmbPatientName.Sorted = true;
-            this.cmbPatientName.TabIndex = 114;
-            // 
             // dungeonLabel1
             // 
             this.dungeonLabel1.AutoSize = true;
@@ -252,53 +243,6 @@
             this.dungeonLabel1.Size = new System.Drawing.Size(96, 17);
             this.dungeonLabel1.TabIndex = 113;
             this.dungeonLabel1.Text = "Patient Name :";
-            // 
-            // dtpVisitDate
-            // 
-            this.dtpVisitDate.Animated = true;
-            this.dtpVisitDate.BackColor = System.Drawing.Color.Transparent;
-            this.dtpVisitDate.BorderRadius = 20;
-            this.dtpVisitDate.Checked = true;
-            this.dtpVisitDate.FillColor = System.Drawing.Color.MediumVioletRed;
-            this.dtpVisitDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpVisitDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpVisitDate.Location = new System.Drawing.Point(161, 290);
-            this.dtpVisitDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpVisitDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpVisitDate.Name = "dtpVisitDate";
-            this.dtpVisitDate.ShadowDecoration.BorderRadius = 20;
-            this.dtpVisitDate.ShadowDecoration.Color = System.Drawing.Color.LightBlue;
-            this.dtpVisitDate.ShadowDecoration.Enabled = true;
-            this.dtpVisitDate.Size = new System.Drawing.Size(171, 36);
-            this.dtpVisitDate.TabIndex = 121;
-            this.dtpVisitDate.Value = new System.DateTime(2026, 8, 26, 19, 57, 18, 86);
-            // 
-            // iconPictureBox7
-            // 
-            this.iconPictureBox7.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.iconPictureBox7.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.iconPictureBox7.IconChar = FontAwesome.Sharp.IconChar.Calendar;
-            this.iconPictureBox7.IconColor = System.Drawing.SystemColors.ActiveBorder;
-            this.iconPictureBox7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox7.IconSize = 24;
-            this.iconPictureBox7.Location = new System.Drawing.Point(131, 302);
-            this.iconPictureBox7.Name = "iconPictureBox7";
-            this.iconPictureBox7.Size = new System.Drawing.Size(26, 24);
-            this.iconPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.iconPictureBox7.TabIndex = 120;
-            this.iconPictureBox7.TabStop = false;
-            // 
-            // dungeonLabel3
-            // 
-            this.dungeonLabel3.AutoSize = true;
-            this.dungeonLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonLabel3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dungeonLabel3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.dungeonLabel3.Location = new System.Drawing.Point(12, 303);
-            this.dungeonLabel3.Name = "dungeonLabel3";
-            this.dungeonLabel3.Size = new System.Drawing.Size(74, 17);
-            this.dungeonLabel3.TabIndex = 119;
-            this.dungeonLabel3.Text = "Visit Date :";
             // 
             // txtVisitID
             // 
@@ -367,6 +311,7 @@
             // 
             // txtNotes
             // 
+            this.txtNotes.BackColor = System.Drawing.Color.Transparent;
             this.txtNotes.BorderRadius = 6;
             this.txtNotes.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNotes.DefaultText = "";
@@ -379,9 +324,13 @@
             this.txtNotes.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtNotes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNotes.Location = new System.Drawing.Point(666, 277);
+            this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.PlaceholderText = "";
+            this.txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtNotes.SelectedText = "";
+            this.txtNotes.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.txtNotes.ShadowDecoration.Enabled = true;
             this.txtNotes.Size = new System.Drawing.Size(190, 66);
             this.txtNotes.TabIndex = 125;
             // 
@@ -414,6 +363,8 @@
             // 
             // txtDiagnosis
             // 
+            this.txtDiagnosis.Animated = true;
+            this.txtDiagnosis.BackColor = System.Drawing.Color.Transparent;
             this.txtDiagnosis.BorderRadius = 6;
             this.txtDiagnosis.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDiagnosis.DefaultText = "";
@@ -422,13 +373,17 @@
             this.txtDiagnosis.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDiagnosis.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDiagnosis.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiagnosis.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiagnosis.Font = new System.Drawing.Font("Times New Roman", 11.25F);
             this.txtDiagnosis.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtDiagnosis.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiagnosis.Location = new System.Drawing.Point(665, 72);
+            this.txtDiagnosis.Multiline = true;
             this.txtDiagnosis.Name = "txtDiagnosis";
             this.txtDiagnosis.PlaceholderText = "";
+            this.txtDiagnosis.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDiagnosis.SelectedText = "";
+            this.txtDiagnosis.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.txtDiagnosis.ShadowDecoration.Enabled = true;
             this.txtDiagnosis.Size = new System.Drawing.Size(190, 66);
             this.txtDiagnosis.TabIndex = 128;
             // 
@@ -494,6 +449,7 @@
             this.icnSave.String = "ü";
             this.icnSave.TabIndex = 134;
             this.icnSave.Text = "tickIcon1";
+            this.icnSave.Click += new System.EventHandler(this.icnSave_Click);
             // 
             // guna2ControlBox1
             // 
@@ -508,34 +464,90 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 135;
             // 
-            // dgvTreatments
+            // errorProvider1
             // 
-            this.dgvTreatments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTreatments.Location = new System.Drawing.Point(128, 349);
-            this.dgvTreatments.Name = "dgvTreatments";
-            this.dgvTreatments.Size = new System.Drawing.Size(504, 176);
-            this.dgvTreatments.TabIndex = 136;
+            this.errorProvider1.ContainerControl = this;
             // 
-            // dungeonLabel8
+            // cmbpatients
             // 
-            this.dungeonLabel8.AutoSize = true;
-            this.dungeonLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonLabel8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dungeonLabel8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.dungeonLabel8.Location = new System.Drawing.Point(27, 365);
-            this.dungeonLabel8.Name = "dungeonLabel8";
-            this.dungeonLabel8.Size = new System.Drawing.Size(81, 17);
-            this.dungeonLabel8.TabIndex = 137;
-            this.dungeonLabel8.Text = "Treatments :";
+            this.cmbpatients.BackColor = System.Drawing.Color.Transparent;
+            this.cmbpatients.BorderRadius = 17;
+            this.cmbpatients.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbpatients.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbpatients.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbpatients.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbpatients.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbpatients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbpatients.ItemHeight = 30;
+            this.cmbpatients.Location = new System.Drawing.Point(161, 176);
+            this.cmbpatients.Name = "cmbpatients";
+            this.cmbpatients.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.cmbpatients.ShadowDecoration.Enabled = true;
+            this.cmbpatients.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.cmbpatients.Size = new System.Drawing.Size(168, 36);
+            this.cmbpatients.TabIndex = 136;
+            // 
+            // dtpAppointmentDate
+            // 
+            this.dtpAppointmentDate.Animated = true;
+            this.dtpAppointmentDate.BackColor = System.Drawing.Color.Transparent;
+            this.dtpAppointmentDate.BorderRadius = 20;
+            this.dtpAppointmentDate.Checked = true;
+            this.dtpAppointmentDate.FillColor = System.Drawing.Color.MediumVioletRed;
+            this.dtpAppointmentDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpAppointmentDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpAppointmentDate.Location = new System.Drawing.Point(158, 285);
+            this.dtpAppointmentDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpAppointmentDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpAppointmentDate.Name = "dtpAppointmentDate";
+            this.dtpAppointmentDate.ShadowDecoration.BorderRadius = 20;
+            this.dtpAppointmentDate.ShadowDecoration.Color = System.Drawing.Color.LightBlue;
+            this.dtpAppointmentDate.ShadowDecoration.Enabled = true;
+            this.dtpAppointmentDate.Size = new System.Drawing.Size(171, 36);
+            this.dtpAppointmentDate.TabIndex = 139;
+            this.dtpAppointmentDate.Value = new System.DateTime(2026, 8, 26, 19, 57, 18, 86);
+            // 
+            // iconPictureBox7
+            // 
+            this.iconPictureBox7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.iconPictureBox7.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.iconPictureBox7.IconChar = FontAwesome.Sharp.IconChar.Calendar;
+            this.iconPictureBox7.IconColor = System.Drawing.SystemColors.ActiveBorder;
+            this.iconPictureBox7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox7.IconSize = 24;
+            this.iconPictureBox7.Location = new System.Drawing.Point(128, 297);
+            this.iconPictureBox7.Name = "iconPictureBox7";
+            this.iconPictureBox7.Size = new System.Drawing.Size(26, 24);
+            this.iconPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.iconPictureBox7.TabIndex = 138;
+            this.iconPictureBox7.TabStop = false;
+            // 
+            // dungeonLabel3
+            // 
+            this.dungeonLabel3.AutoSize = true;
+            this.dungeonLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonLabel3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dungeonLabel3.ForeColor = System.Drawing.Color.SteelBlue;
+            this.dungeonLabel3.Location = new System.Drawing.Point(9, 298);
+            this.dungeonLabel3.Name = "dungeonLabel3";
+            this.dungeonLabel3.Size = new System.Drawing.Size(123, 17);
+            this.dungeonLabel3.TabIndex = 137;
+            this.dungeonLabel3.Text = "Appointment Date :";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.BackColor = System.Drawing.Color.MediumBlue;
             // 
             // FrmAddUpdateVisit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(867, 520);
-            this.Controls.Add(this.dungeonLabel8);
-            this.Controls.Add(this.dgvTreatments);
+            this.ClientSize = new System.Drawing.Size(867, 395);
+            this.Controls.Add(this.dtpAppointmentDate);
+            this.Controls.Add(this.iconPictureBox7);
+            this.Controls.Add(this.dungeonLabel3);
+            this.Controls.Add(this.cmbpatients);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.icnSave);
             this.Controls.Add(this.dungeonLabel6);
@@ -550,14 +562,10 @@
             this.Controls.Add(this.txtVisitID);
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.dungeonLabel4);
-            this.Controls.Add(this.dtpVisitDate);
-            this.Controls.Add(this.iconPictureBox7);
-            this.Controls.Add(this.dungeonLabel3);
             this.Controls.Add(this.cmbDentistName);
             this.Controls.Add(this.dungeonLabel2);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.iconPictureBox6);
-            this.Controls.Add(this.cmbPatientName);
             this.Controls.Add(this.dungeonLabel1);
             this.Controls.Add(this.txtAppointmentID);
             this.Controls.Add(this.iconPictureBox10);
@@ -572,12 +580,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -597,11 +605,7 @@
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox6;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbPatientName;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpVisitDate;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox7;
-        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel3;
         private Guna.UI2.WinForms.Guna2TextBox txtVisitID;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private ReaLTaiizor.Controls.DungeonLabel dungeonLabel4;
@@ -616,7 +620,11 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private ReaLTaiizor.Controls.TickIcon icnSave;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel8;
-        private System.Windows.Forms.DataGridView dgvTreatments;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbpatients;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpAppointmentDate;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox7;
+        private ReaLTaiizor.Controls.DungeonLabel dungeonLabel3;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -27,7 +27,7 @@ namespace DentalClinic_BussinessLayer
             this.notes = notes;
             Mode = enMode.Update;
         }
-        private ClsVisitTreatmentsBuss()
+        public ClsVisitTreatmentsBuss()
         {
             this.visitTreatmentID  =-1;
             this.visitID = -1;

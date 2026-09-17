@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVisitsTreatments));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             this.dgvVisitstreatments = new Guna.UI2.WinForms.Guna2DataGridView();
             this.lblcount = new ReaLTaiizor.Controls.DungeonLabel();
@@ -43,20 +43,17 @@
             this.txtFilter = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmbdateFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dateTimePacker = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnAddvisit = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.cmsVisits = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitstreatments)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.cmsVisits.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Dental_Clinic_Project.Properties.Resources.Dentist_taking_care_of_teeth_health;
-            this.pictureBox1.Location = new System.Drawing.Point(301, -7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(195, 154);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 53;
-            this.pictureBox1.TabStop = false;
             // 
             // bigLabel1
             // 
@@ -187,6 +184,9 @@
             "Visit Date"});
             this.cmbfilter.Location = new System.Drawing.Point(82, 165);
             this.cmbfilter.Name = "cmbfilter";
+            this.cmbfilter.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.cmbfilter.ShadowDecoration.Enabled = true;
+            this.cmbfilter.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.cmbfilter.Size = new System.Drawing.Size(167, 36);
             this.cmbfilter.TabIndex = 62;
             this.cmbfilter.SelectedIndexChanged += new System.EventHandler(this.cmbfilter_SelectedIndexChanged);
@@ -211,6 +211,7 @@
             this.txtFilter.Size = new System.Drawing.Size(165, 36);
             this.txtFilter.TabIndex = 64;
             this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
+            this.txtFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilterValue_KeyPress);
             // 
             // cmbdateFilter
             // 
@@ -232,6 +233,9 @@
             "Specific Date"});
             this.cmbdateFilter.Location = new System.Drawing.Point(255, 165);
             this.cmbdateFilter.Name = "cmbdateFilter";
+            this.cmbdateFilter.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.cmbdateFilter.ShadowDecoration.Enabled = true;
+            this.cmbdateFilter.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.cmbdateFilter.Size = new System.Drawing.Size(165, 36);
             this.cmbdateFilter.TabIndex = 65;
             this.cmbdateFilter.SelectedIndexChanged += new System.EventHandler(this.cmbdateFilter_SelectedIndexChanged);
@@ -257,19 +261,85 @@
             this.dateTimePacker.Value = new System.DateTime(2026, 8, 26, 19, 57, 18, 86);
             this.dateTimePacker.ValueChanged += new System.EventHandler(this.dateTimePacker_ValueChanged);
             // 
-            // guna2ImageButton1
+            // btnAddvisit
             // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(773, 138);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(64, 54);
-            this.guna2ImageButton1.TabIndex = 67;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            this.btnAddvisit.AnimatedGIF = true;
+            this.btnAddvisit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddvisit.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAddvisit.HoverState.Image = global::Dental_Clinic_Project.Properties.Resources.add__2_;
+            this.btnAddvisit.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAddvisit.Image = global::Dental_Clinic_Project.Properties.Resources.add__1_;
+            this.btnAddvisit.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnAddvisit.ImageRotate = 0F;
+            this.btnAddvisit.Location = new System.Drawing.Point(772, 141);
+            this.btnAddvisit.Name = "btnAddvisit";
+            this.btnAddvisit.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAddvisit.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.btnAddvisit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnAddvisit.Size = new System.Drawing.Size(65, 60);
+            this.btnAddvisit.TabIndex = 67;
+            this.btnAddvisit.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Dental_Clinic_Project.Properties.Resources.Dentist_taking_care_of_teeth_health;
+            this.pictureBox1.Location = new System.Drawing.Point(301, -7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(195, 154);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // cmsVisits
+            // 
+            this.cmsVisits.BackColor = System.Drawing.SystemColors.Menu;
+            this.cmsVisits.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmsVisits.ImageScalingSize = new System.Drawing.Size(30, 30);
+            this.cmsVisits.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showDetailsToolStripMenuItem,
+            this.updateToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.cmsVisits.Name = "cmsDentists";
+            this.cmsVisits.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.cmsVisits.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.cmsVisits.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.cmsVisits.RenderStyle.ColorTable = null;
+            this.cmsVisits.RenderStyle.RoundedEdges = true;
+            this.cmsVisits.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.cmsVisits.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmsVisits.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cmsVisits.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.cmsVisits.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmsVisits.Size = new System.Drawing.Size(195, 134);
+            // 
+            // showDetailsToolStripMenuItem
+            // 
+            this.showDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showDetailsToolStripMenuItem.Image = global::Dental_Clinic_Project.Properties.Resources.appointment__2_;
+            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(194, 36);
+            this.showDetailsToolStripMenuItem.Text = "Show Details";
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Image = global::Dental_Clinic_Project.Properties.Resources.appointment__3_;
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(194, 36);
+            this.updateToolStripMenuItem.Text = "Update";
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Image = global::Dental_Clinic_Project.Properties.Resources.appointment;
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(194, 36);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // frmVisitsTreatments
             // 
@@ -277,7 +347,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(849, 636);
-            this.Controls.Add(this.guna2ImageButton1);
+            this.Controls.Add(this.btnAddvisit);
             this.Controls.Add(this.dateTimePacker);
             this.Controls.Add(this.cmbdateFilter);
             this.Controls.Add(this.txtFilter);
@@ -294,8 +364,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVisitsTreatments";
             this.Load += new System.EventHandler(this.frmVisitsTreatments_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitstreatments)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.cmsVisits.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,6 +384,11 @@
         private Guna.UI2.WinForms.Guna2TextBox txtFilter;
         private Guna.UI2.WinForms.Guna2ComboBox cmbdateFilter;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePacker;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnAddvisit;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsVisits;
+        private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }

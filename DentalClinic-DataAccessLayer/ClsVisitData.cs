@@ -52,7 +52,7 @@ namespace DentalClinic_DataAccessLayer
                         Object result = command.ExecuteScalar();
                         if (result != null && int.TryParse(result.ToString(), out int insertedID))
                         {
-                            appointmentID = insertedID;
+                            VisitID = insertedID;
                         }
 
                     }

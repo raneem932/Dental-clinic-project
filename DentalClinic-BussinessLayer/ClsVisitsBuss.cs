@@ -14,7 +14,7 @@ namespace DentalClinic_BussinessLayer
         public int patientID { get; set; }
         public int dentistID { get; set; }
         public int? AppointmentID { get; set; }
-        public DateTime visitDate { get; set; }
+        public DateTime visitDate { get;  }
         public string diagnosis { get; set; }
         public string notes { get; set; }
         public List<int> treatmntIDs{get;set;}
@@ -22,7 +22,7 @@ namespace DentalClinic_BussinessLayer
         public enmode mode = enmode.AddNew;
         public ClsVisitsBuss()
         {
-            this.visitID = 1;
+            this.visitID = -1;
             this.patientID = -1;
             this.dentistID = -1;
             this.AppointmentID = -1;
@@ -44,11 +44,7 @@ namespace DentalClinic_BussinessLayer
             this.mode = enmode.update;
             this.treatmntIDs =treatmntIDs;
         }
-        private bool _AddNewVisit()
-        {
-            this.visitID = ClsVisitData.AddNewVisit(this.patientID, this.dentistID, this.AppointmentID, this.diagnosis, this.notes);
-            return (this.visitID != -1);
-        }
+       
         private bool _updateVisit()
         {
             return ClsVisitData.UpdateVisit(this.visitID, this.patientID, this.dentistID, this.AppointmentID, this.diagnosis, this.notes);
@@ -56,25 +52,9 @@ namespace DentalClinic_BussinessLayer
         }
         public bool save()
         {
-            switch (mode)
-            {
-                case enmode.AddNew:
+            this.visitID = ClsVisitData.addnewvisitWithTreatments(this.patientID, this.dentistID, this.AppointmentID, this.diagnosis, this.notes, this.treatmntIDs);
+            return this.visitID != -1;
 
-                    if (_AddNewVisit())
-                    {
-                        mode = enmode.update;
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                case enmode.update:
-                    return _updateVisit();
-
-
-            }
-            return false;
         }
         public static bool DeleteVisit(int id)
         {

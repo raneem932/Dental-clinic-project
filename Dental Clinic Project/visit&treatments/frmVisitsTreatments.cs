@@ -49,7 +49,15 @@ namespace Dental_Clinic_Project.visit_treatments
 
             }
         }
-
+        private void txtFilterValue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cmbfilter.Text == "ID")
+            {
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            }
+            else
+                e.Handled = false;
+        }
         private void frmVisitsTreatments_Load(object sender, EventArgs e)
         {
             _refreshData();
@@ -57,6 +65,8 @@ namespace Dental_Clinic_Project.visit_treatments
             dateTimePacker.Visible = false;
             cmbdateFilter.Visible = false;
             txtFilter.Visible = false;
+            ToolTip tooltip1 = new ToolTip();
+            tooltip1.SetToolTip(btnAddvisit, "add new visit with treatments");
         }
 
         private void cmbfilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -139,6 +149,16 @@ namespace Dental_Clinic_Project.visit_treatments
         {
             FrmAddUpdateVisit frm = new FrmAddUpdateVisit();
             frm.ShowDialog();
+            _refreshData();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int visitID = (int)dgvVisitstreatments.CurrentRow.Cells[0].Value;
+            if(MessageBox.Show("Are you sure to Delete Visit :" + visitID + "?", "Delete visit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+
+            }
         }
     }
 }
