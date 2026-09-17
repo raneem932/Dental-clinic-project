@@ -21,7 +21,7 @@ namespace Dental_Clinic_Project.Appointments
 
         private void ctrAppointmentCard1_Load(object sender, EventArgs e)
         {
-ctrAppointmentCard1.LoadData(_appointmentID);
+ctrAppointmentCard1.Loaddata(_appointmentID);
         }
     }
 }
