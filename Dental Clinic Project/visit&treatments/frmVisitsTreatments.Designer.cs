@@ -87,6 +87,7 @@
             this.dgvVisitstreatments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvVisitstreatments.ColumnHeadersHeight = 35;
             this.dgvVisitstreatments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvVisitstreatments.ContextMenuStrip = this.cmsVisits;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(212)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

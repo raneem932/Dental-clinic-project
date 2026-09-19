@@ -93,6 +93,10 @@ namespace DentalClinic_BussinessLayer
                 return null;
             }
         }*/
-
+       public static bool deleteVisitWithTreatments(int visitID)
+        {
+            return ClsVisitData.DeleteVisitWithTreatents(visitID);
+        }
     }
+   
 }

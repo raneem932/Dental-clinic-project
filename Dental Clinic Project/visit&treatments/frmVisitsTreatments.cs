@@ -157,8 +157,18 @@ namespace Dental_Clinic_Project.visit_treatments
             int visitID = (int)dgvVisitstreatments.CurrentRow.Cells[0].Value;
             if(MessageBox.Show("Are you sure to Delete Visit :" + visitID + "?", "Delete visit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
+                if (ClsVisitsBuss.deleteVisitWithTreatments(visitID))
+                {
+                    MessageBox.Show("Deleted successfully", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                }
+                else
+                {
+                    MessageBox.Show("Deleted failed", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
+            _refreshData();
         }
     }
 }

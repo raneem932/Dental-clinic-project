@@ -170,6 +170,62 @@ namespace DentalClinic_DataAccessLayer
             return (rowIffected > 0);
 
         }
+
+    public static bool DeleteVisitWithTreatents(int visitID)
+        {
+            int rowiffected = 0;
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                connection.Open();
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
+                    try
+                    {
+                        using (SqlCommand command = new SqlCommand("sp_deleteVisitTreatmentbyVisitId", connection, transaction))
+                        {
+                            command.CommandType = CommandType.StoredProcedure;
+                            command.Parameters.AddWithValue("@visitID", visitID);
+                            try
+                            {
+
+                                command.ExecuteNonQuery() ;
+                            }
+                            catch (Exception ex)
+                            {
+                                throw new Exception("error:" + ex.Message);
+                            }
+
+                        }
+                        using (SqlCommand command1 = new SqlCommand("sp_DeleteVisit", connection, transaction))
+                        {
+                            command1.CommandType = CommandType.StoredProcedure;
+                            command1.Parameters.AddWithValue("@visitID", visitID);
+                            try
+                            {
+
+                                rowiffected = command1.ExecuteNonQuery();
+                                if (rowiffected == 0) {                                                                                                                                                    
+                                transaction.Rollback();
+                                return false;
+                            }
+                            }
+                            catch (Exception ex)
+                            {
+                                throw new Exception("error:" + ex.Message);
+                            }
+                        }
+                        transaction.Commit();
+                        return true;
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        return false;
+                        throw;
+                    }
+                }
+            }
+        }
         public static DataTable GetAllVisitsWithFilterAndPatientSearch(int? patientID,int? dentiestID,DateTime? visitDate,string search)
         {
 
