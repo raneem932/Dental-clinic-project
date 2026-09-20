@@ -113,6 +113,7 @@
             this.foreverGroupBox1.Size = new System.Drawing.Size(616, 390);
             this.foreverGroupBox1.TabIndex = 2;
             this.foreverGroupBox1.TextColor = System.Drawing.Color.SteelBlue;
+            this.foreverGroupBox1.Click += new System.EventHandler(this.foreverGroupBox1_Click);
             // 
             // lblStatus
             // 
@@ -464,9 +465,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Dental_Clinic_Project.Properties.Resources.istockphoto_2160600453_1024x10241;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::Dental_Clinic_Project.Properties.Resources.istockphoto_2160600453_1024x1024;
+            this.pictureBox1.Image = global::Dental_Clinic_Project.Properties.Resources.istockphoto_2160600453_1024x10242;
             this.pictureBox1.Location = new System.Drawing.Point(14, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(247, 359);

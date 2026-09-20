@@ -218,11 +218,23 @@
     <Compile Include="users\UctrUserCard.Designer.cs">
       <DependentUpon>UctrUserCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="visit&amp;treatments\ctrVisitCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="visit&amp;treatments\ctrVisitCard.Designer.cs">
+      <DependentUpon>ctrVisitCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="visit&amp;treatments\FrmAddUpdateVisit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="visit&amp;treatments\FrmAddUpdateVisit.Designer.cs">
       <DependentUpon>FrmAddUpdateVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="visit&amp;treatments\frmVisitCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visit&amp;treatments\frmVisitCard.Designer.cs">
+      <DependentUpon>frmVisitCard.cs</DependentUpon>
     </Compile>
     <Compile Include="visit&amp;treatments\frmVisitsTreatments.cs">
       <SubType>Form</SubType>
@@ -304,8 +316,14 @@
     <EmbeddedResource Include="users\UctrUserCard.resx">
       <DependentUpon>UctrUserCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="visit&amp;treatments\ctrVisitCard.resx">
+      <DependentUpon>ctrVisitCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="visit&amp;treatments\FrmAddUpdateVisit.resx">
       <DependentUpon>FrmAddUpdateVisit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visit&amp;treatments\frmVisitCard.resx">
+      <DependentUpon>frmVisitCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="visit&amp;treatments\frmVisitsTreatments.resx">
       <DependentUpon>frmVisitsTreatments.cs</DependentUpon>
@@ -339,118 +357,19 @@
     <None Include="Resources\icons8-cross-mark-button-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\home %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home %282%291.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\house.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\house %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\house1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home %284%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-dentist-96.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\dentist.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dentist2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\toothache %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\toothache.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\toothache %282%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\appointment.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\appointment %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\information.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dentist %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dental-appointment.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\medical.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dental-clinic.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\toothache %281%291.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\toothache1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\scaling.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\scaling %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\appointment1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\appointment %281%291.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\invoice.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\invoice %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\invoice %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\reception %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\reception %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\reception %282%291.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dental-care.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\doctor.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\home1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dental-clinic1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dentist1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\patient.png" />
@@ -465,25 +384,7 @@
     <None Include="Resources\diagnostic.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\diagnostic1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\invoice1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dentalClinic.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dental2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\istockphoto-1319992900-612x612.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\istockphoto-1166993271-612x612.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\istockphoto-1456714784-612x612.jpg" />
@@ -619,6 +520,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-2228425516-1024x1024.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-2160600453-1024x10242.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

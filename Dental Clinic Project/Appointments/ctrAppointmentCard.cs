@@ -60,5 +60,10 @@ namespace Dental_Clinic_Project.Appointments
         {
 
         }
+
+        private void foreverGroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

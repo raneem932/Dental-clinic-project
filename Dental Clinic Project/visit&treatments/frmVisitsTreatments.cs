@@ -170,5 +170,12 @@ namespace Dental_Clinic_Project.visit_treatments
             }
             _refreshData();
         }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int visitID = (int)dgvVisitstreatments.CurrentRow.Cells[0].Value;
+            frmVisitCard frm = new frmVisitCard(visitID);
+            frm.ShowDialog();
+        }
     }
 }

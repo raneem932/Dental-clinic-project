@@ -59,25 +59,11 @@ namespace Dental_Clinic_Project.visit_treatments
         }
         private void _defualtData()
         {
-                cmbpatients.Text = "";
-                cmbDentistName.Text = "";
-                ckbTreatments.Text = "";
-                txtDiagnosis.Text = "";
-                txtNotes.Text = "";
-                //DataSet ds = ClsVisitsBuss.getVisitDetails(_visitid);
-                //if (ds.Tables[0].Rows.Count > 0)
-                //{
-                //    DataRow row =ds.Tables[0].Rows[0];
-                //    cmbPatientName.Text = row["patientName"].ToString();
-                //    cmbDentistName.Text = row["DentistName"].ToString();
-                //    txtAppointmentID.Text = row["AppointmentID"].ToString();
-                //    dtpVisitDate.Value = (DateTime)row["visitdate"];
-                //    txtDiagnosis.Text = row["diagnosis"].ToString();
-                //    txtNotes.Text = row["notes"].ToString();
-                //    dgvTreatments.DataSource = ds.Tables[1];
-                //}
-
-            
+            cmbpatients.Text = "";
+            cmbDentistName.Text = "";
+            ckbTreatments.Text = "";
+            txtDiagnosis.Text = "";
+            txtNotes.Text = "";
         }
         private void Imptycombo_Validating(object sender, CancelEventArgs e)
         {

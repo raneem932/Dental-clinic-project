@@ -483,6 +483,26 @@ namespace Dental_Clinic_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_2160600453_1024x10242 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-2160600453-1024x10242", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_2228425516_1024x1024 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-2228425516-1024x1024", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap istockphoto_2234028816_1024x1024 {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-2234028816-1024x1024", resourceCulture);
