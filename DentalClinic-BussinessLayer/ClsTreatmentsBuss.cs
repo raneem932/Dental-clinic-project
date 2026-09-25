@@ -18,7 +18,7 @@ namespace DentalClinic_BussinessLayer
         public enum enMode { addNew=0,Update=1}
         public enMode Mode = enMode.addNew;
 
-      private  ClsTreatmentsBuss()
+      public  ClsTreatmentsBuss()
         {
             this.TreatmentID = -1;
             this.TreatmentDescription = "";
@@ -30,7 +30,7 @@ namespace DentalClinic_BussinessLayer
         {
             TreatmentID = treatmentID;
             TreatmentName = treatmentName;
-            TreatmentDescription = treatmentDescription;
+            this.TreatmentDescription = treatmentDescription;
             this.price = price;
             Mode = enMode.Update;
         }

@@ -1,4 +1,5 @@
-﻿using DentalClinic_BussinessLayer;
+﻿using Dental_Clinic_Project.treatments;
+using DentalClinic_BussinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,6 +68,8 @@ namespace Dental_Clinic_Project.visit_treatments
             txtFilter.Visible = false;
             ToolTip tooltip1 = new ToolTip();
             tooltip1.SetToolTip(btnAddvisit, "add new visit with treatments");
+            ToolTip tooltip2 = new ToolTip();
+            tooltip2.SetToolTip(btnTreatments, "treatments Details");
         }
 
         private void cmbfilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -147,9 +150,7 @@ namespace Dental_Clinic_Project.visit_treatments
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
-            FrmAddUpdateVisit frm = new FrmAddUpdateVisit();
-            frm.ShowDialog();
-            _refreshData();
+          
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -175,6 +176,24 @@ namespace Dental_Clinic_Project.visit_treatments
         {
             int visitID = (int)dgvVisitstreatments.CurrentRow.Cells[0].Value;
             frmVisitCard frm = new frmVisitCard(visitID);
+            frm.ShowDialog();
+        }
+
+        private void dgvVisitstreatments_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnAddvisit_Click(object sender, EventArgs e)
+        {
+            FrmAddUpdateVisit frm = new FrmAddUpdateVisit();
+            frm.ShowDialog();
+            _refreshData();
+        }
+
+        private void btnTreatments_Click(object sender, EventArgs e)
+        {
+            FrmTreatmentsList frm = new FrmTreatmentsList();
             frm.ShowDialog();
         }
     }

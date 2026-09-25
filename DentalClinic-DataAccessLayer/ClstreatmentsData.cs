@@ -56,8 +56,10 @@ namespace DentalClinic_DataAccessLayer
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand("sp_updateTreatment", connection))
+
                 {
                     command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@treatmentID", TreatmentID);
                     if (TreatmentName != null && TreatmentName != "")
                     {
 
