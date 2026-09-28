@@ -34,7 +34,9 @@ namespace Dental_Clinic_Project.Appointments
             }
         }
        
-        public void Loaddata(int appointmentID)
+
+        public void LoadData(int appointmentID)
+
         {
             _AppointmentID = appointmentID;
             _appointmentSelected = ClsAppointmentBuss.find(appointmentID);
