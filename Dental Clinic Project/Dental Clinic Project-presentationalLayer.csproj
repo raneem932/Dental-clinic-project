@@ -156,6 +156,12 @@
     <Compile Include="global\ClsGlobal.cs" />
     <Compile Include="global\format.cs" />
     <Compile Include="global\validation.cs" />
+    <Compile Include="invoices\FrmListInvoces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invoices\FrmListInvoces.Designer.cs">
+      <DependentUpon>FrmListInvoces.cs</DependentUpon>
+    </Compile>
     <Compile Include="logIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invoices\FrmListInvoces.resx">
+      <DependentUpon>FrmListInvoces.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="logIN.resx">
       <DependentUpon>logIN.cs</DependentUpon>
@@ -556,6 +565,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\treatment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1791479382-1024x1024.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-2167936216-1024x1024.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-2167936216-1024x10241.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

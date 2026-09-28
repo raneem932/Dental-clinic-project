@@ -29,7 +29,15 @@ namespace Dental_Clinic_Project.Appointments
         {
             InitializeComponent();
         }
-
+        private void txtFilterValue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cmbfilter.Text == "ID")
+            {
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            }
+            else
+                e.Handled = false;
+        }
         private void frmListAppointments_Load(object sender, EventArgs e)
         {
             dateTimePacker.Visible = false;
@@ -63,6 +71,7 @@ namespace Dental_Clinic_Project.Appointments
 
         private void cmbfilter_SelectedIndexChanged(object sender, EventArgs e)
         {
+            _refreshData();
             txtFilter.Visible = (cmbfilter.Text != "None" && cmbfilter.Text != "status" && cmbfilter.Text != "Appointment Date");
             if (txtFilter.Visible)
             {

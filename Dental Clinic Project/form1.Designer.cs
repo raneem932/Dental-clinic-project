@@ -40,9 +40,9 @@
             this.btnInvoices = new Guna.UI2.WinForms.Guna2Button();
             this.btnVisits = new Guna.UI2.WinForms.Guna2Button();
             this.btnAppointments = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.formPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -261,6 +261,7 @@
             this.btnInvoices.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnInvoices.TextOffset = new System.Drawing.Point(35, 0);
             this.btnInvoices.UseTransparentBackground = true;
+            this.btnInvoices.Click += new System.EventHandler(this.btnInvoices_Click);
             // 
             // btnVisits
             // 
@@ -330,19 +331,14 @@
             this.btnAppointments.UseTransparentBackground = true;
             this.btnAppointments.Click += new System.EventHandler(this.btnAppointments_Click);
             // 
-            // guna2ShadowForm1
-            // 
-            this.guna2ShadowForm1.BorderRadius = 44;
-            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.MediumTurquoise;
-            this.guna2ShadowForm1.TargetForm = this;
-            // 
             // formPanel
             // 
             this.formPanel.BackColor = System.Drawing.Color.Transparent;
             this.formPanel.FillColor = System.Drawing.Color.White;
+            this.formPanel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.formPanel.Location = new System.Drawing.Point(159, 39);
             this.formPanel.Name = "formPanel";
-            this.formPanel.ShadowColor = System.Drawing.Color.Black;
+            this.formPanel.ShadowColor = System.Drawing.Color.Transparent;
             this.formPanel.Size = new System.Drawing.Size(858, 637);
             this.formPanel.TabIndex = 4;
             this.formPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.formPanel_Paint);
@@ -370,6 +366,12 @@
             this.nightControlBox1.Name = "nightControlBox1";
             this.nightControlBox1.Size = new System.Drawing.Size(139, 31);
             this.nightControlBox1.TabIndex = 17;
+            // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.BorderRadius = 44;
+            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.MediumTurquoise;
+            this.guna2ShadowForm1.TargetForm = this;
             // 
             // Form1
             // 
@@ -404,9 +406,9 @@
         private Guna.UI2.WinForms.Guna2Button btnVisits;
         private Guna.UI2.WinForms.Guna2Button btnAppointments;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2ShadowPanel formPanel;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }
 

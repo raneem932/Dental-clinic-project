@@ -78,6 +78,7 @@ namespace Dental_Clinic_Project
                 txtFilter.Text = "";
                 txtFilter.Focus();
             }
+            _refreshData();
         }
 
         private void txtFilter_KeyPress(object sender, KeyPressEventArgs e)

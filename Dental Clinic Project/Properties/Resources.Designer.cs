@@ -433,6 +433,16 @@ namespace Dental_Clinic_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1791479382_1024x1024 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1791479382-1024x1024", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap istockphoto_1887268593_1024x1024 {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-1887268593-1024x1024", resourceCulture);
@@ -486,6 +496,26 @@ namespace Dental_Clinic_Project.Properties {
         internal static System.Drawing.Bitmap istockphoto_2160600453_1024x10242 {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-2160600453-1024x10242", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_2167936216_1024x1024 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-2167936216-1024x1024", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_2167936216_1024x10241 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-2167936216-1024x10241", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

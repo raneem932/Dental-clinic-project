@@ -81,6 +81,22 @@ namespace DentalClinic_BussinessLayer
         {
             return ClsInvoicesData.GetAllInvoices();
         }
+        public static DataTable getAllInvoicesthismonth()
+        {
+            return ClsInvoicesData.GetAllInvoicesthisMonth();
+        }
+        public static DataTable getAllInvoicesthisyear()
+        {
+            return ClsInvoicesData.GetAllInvoicesthisyear();
+        }
+        public static DataTable getAllInvoicesAtspecificdate(DateTime date)
+        {
+            return ClsInvoicesData.GetAllInvoicesAtSpecificDate(date);
+        }
+        public static DataTable getAllInvoicestoday()
+        {
+            return ClsInvoicesData.GetAllInvoicesToday();
+        }
         public static DataTable GetAllInvoicesByDate(DateTime startDate, DateTime endDate)
         {
             return ClsInvoicesData.GetAllInvoicesByDate(startDate, endDate);

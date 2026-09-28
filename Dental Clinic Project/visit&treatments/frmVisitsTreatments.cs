@@ -76,7 +76,7 @@ namespace Dental_Clinic_Project.visit_treatments
         {
             txtFilter.Visible = (cmbfilter.Text != "Visit Date"&& cmbfilter.Text != "None");
             cmbdateFilter.Visible = (cmbfilter.Text == "Visit Date" && cmbfilter.Text != "None");
-            
+            _refreshData();
         }
 
         private void cmbdateFilter_SelectedIndexChanged(object sender, EventArgs e)

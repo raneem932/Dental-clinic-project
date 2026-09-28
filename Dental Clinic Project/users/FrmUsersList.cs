@@ -114,7 +114,7 @@ private void txtFilter_TextChanged(object sender, EventArgs e)
                 cmbIsActive.Text = "None";
             }
             cmbRole.Visible = (cmbfilter.Text == "Role");
-          
+            _refreshData();
         }
 
         private void txtFilter_KeyPress(object sender, KeyPressEventArgs e)

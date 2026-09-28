@@ -171,6 +171,152 @@ namespace DentalClinic_DataAccessLayer
 
             }
         }
+        public static DataTable GetAllInvoicesToday()
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand("sp_GetAllInvoicestoday", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    try
+                    {
+                        connection.Open();
+
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        if (reader.HasRows)
+
+                        {
+                            dt.Load(reader);
+                        }
+
+                        reader.Close();
+
+
+                    }
+
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Error get data: " + ex.Message);
+                    }
+
+
+                }
+                return dt;
+
+            }
+        }
+        public static DataTable GetAllInvoicesthisMonth()
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand("sp_GetAllInvoicesthismonth", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    try
+                    {
+                        connection.Open();
+
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        if (reader.HasRows)
+
+                        {
+                            dt.Load(reader);
+                        }
+
+                        reader.Close();
+
+
+                    }
+
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Error get data: " + ex.Message);
+                    }
+
+
+                }
+                return dt;
+
+            }
+        }
+        public static DataTable GetAllInvoicesthisyear()
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand("sp_GetAllInvoicesthisyear", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    try
+                    {
+                        connection.Open();
+
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        if (reader.HasRows)
+
+                        {
+                            dt.Load(reader);
+                        }
+
+                        reader.Close();
+
+
+                    }
+
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Error get data: " + ex.Message);
+                    }
+
+
+                }
+                return dt;
+
+            }
+        }
+        public static DataTable GetAllInvoicesAtSpecificDate(DateTime date)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand("sp_GetAllInvoiceAtSpecificDate", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@date", date);
+                    try
+                    {
+                        connection.Open();
+
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        if (reader.HasRows)
+
+                        {
+                            dt.Load(reader);
+                        }
+
+                        reader.Close();
+
+
+                    }
+
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Error get data: " + ex.Message);
+                    }
+
+
+                }
+                return dt;
+
+            }
+        }
+
         public static DataTable GetAllInvoicesByDate(DateTime startDate,DateTime endDate)
         {
             DataTable dt = new DataTable();

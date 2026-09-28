@@ -107,6 +107,7 @@ namespace Dental_Clinic_Project.Dentists
 
         private void cmbfilter_SelectedIndexChanged(object sender, EventArgs e)
         {
+            _refreshData();
             txtFilter.Visible = (cmbfilter.Text != "None");
             if (txtFilter.Visible)
             {
